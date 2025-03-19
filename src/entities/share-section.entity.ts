@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, CreateDateColumn, UpdateDateColumn } from "typeorm";
 import { GroupCard } from "./group-card.entity";
 import { User } from "./user.entity";
 
@@ -9,6 +9,12 @@ export class ShareSection {
 
     @Column()
     set_cards_name: string;
+
+    @CreateDateColumn({ type: 'timestamp' })
+    createdAt: Date;
+
+    @UpdateDateColumn({ type: 'timestamp' })
+    updatedAt: Date;
 
     @ManyToOne(() => GroupCard, (groupCard) => groupCard.shareSections, { onDelete: "CASCADE" })
     groupCard: GroupCard;

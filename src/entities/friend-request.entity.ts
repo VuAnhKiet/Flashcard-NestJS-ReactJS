@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, CreateDateColumn, UpdateDateColumn } from "typeorm";
 import { User } from "./user.entity";
 
 @Entity()
@@ -8,6 +8,12 @@ export class FriendRequest {
 
     @Column({ type: "enum", enum: ["pending", "accepted", "declined"], default: "pending" })
     status: string;
+
+    @CreateDateColumn({ type: 'timestamp' })
+    createdAt: Date;
+
+    @UpdateDateColumn({ type: 'timestamp' })
+    updatedAt: Date;
 
     @ManyToOne(() => User, (user) => user.sentRequests)
     sender: User;
