@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany, OneToOne } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, OneToOne, UpdateDateColumn, CreateDateColumn } from "typeorm";
 import { GroupCard } from "./group-card.entity";
 import { FriendRequest } from "./friend-request.entity";
 import { ShareSection } from "./share-section.entity";
@@ -9,7 +9,7 @@ export class User {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column({ unique: true })
     fullname: string;
 
     @Column()
@@ -18,8 +18,14 @@ export class User {
     @Column({ unique: true })
     email: string;
 
-    @Column({ nullable: true }) 
-    refreshToken?: string;
+    @Column({ type: 'varchar', nullable: true })
+    refreshToken?: string | null;
+
+    @CreateDateColumn({ type: 'timestamp' })
+    createdAt: Date; 
+
+    @UpdateDateColumn({ type: 'timestamp' })
+    updatedAt: Date; 
 
     @OneToMany(() => GroupCard, (groupCard) => groupCard.user)
     groupCards: GroupCard[];
