@@ -1,4 +1,4 @@
-import { get, post, put, del } from './api';
+import { get, post, put, del,patch } from './api';
 
 export const fetchUser = async () => {
     return await get('/auth');
@@ -17,7 +17,7 @@ export const userSendResetLink = async (email) => {
 }
 
 export const userResetPassWord = async (token,data) => {
-    return await post (`auth/reset-password/${token}`,{newPassword:data})
+    return await patch (`auth/reset-password/${token}`,{newPassword:data})
 }
 
 export const userLogout = async () => {
