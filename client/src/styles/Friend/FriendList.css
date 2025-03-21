@@ -1,0 +1,144 @@
+.friend-list-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 1%;
+    top: 49%;
+    transform: translateY(-50%);
+    width: 300px;
+    max-width: 90%;
+    height: 400px;
+    margin-right: 16px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+}
+
+.friend-list-container-content {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.friend-list-container-content::-webkit-scrollbar {
+    display: none;
+}
+
+.friend-section,
+.request-section {
+    margin-bottom: 15px;
+}
+
+.friend-section-title,
+.request-section-title {
+    color: #333;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.friend-section-title::after,
+.request-section-title::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 4px;
+    background: #4CAF50;
+    margin: 5px auto;
+    border-radius: 2px;
+}
+
+.friend-list,
+.request-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.friend-list li,
+.request-list li {
+    background: #f7f7f7;
+    margin: 0;
+    padding: 12px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s, transform 0.2s;
+    position: relative;
+}
+
+.friend-list li:hover,
+.request-list li:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.request-list li span {
+    flex-grow: 1;
+    margin-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #555;
+}
+
+.approve-btn,
+.deny-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.approve-btn {
+    background-color: #28a745;
+}
+
+.approve-btn:hover {
+    background-color: #218838;
+}
+
+.deny-btn {
+    background-color: #dc3545;
+}
+
+.deny-btn:hover {
+    background-color: #c82333;
+    display: flex;
+}
+
+.unfriend-btn {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #dc3545;
+}
+
+.approve-deny {
+    display: none;
+}
+
+.friend-request:hover .approve-deny {
+    display: flex;
+}
+
+.friend-list li:hover .unfriend-btn {
+    display: block;
+}

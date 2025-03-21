@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+/* Form Styles */
+@import 'styles/Form/CreateBox.css';
+@import 'styles/Form/Login.css';
+@import 'styles/Form/Registration.css';
+@import 'styles/Form/Edit.css';
+@import 'styles/Form/SearchBar.css';
+@import 'styles/Form/ForgotPassword.css';
+@import 'styles/Form/ResetPassword.css';
+
+/* Card and Setcard Styles */
+@import 'styles/Card/Cards.css';
+@import 'styles/Setcard/SetofCards.css';
+@import 'styles/Setcard/ShareSection.css';
+
+/* Button Styles */
+@import 'styles/Button/Buttons.css';
+
+/* Pop-up Styles */
+@import 'styles/PopUp/PageNotFound.css';
+@import 'styles/PopUp/NoResult.css';
+@import 'styles/PopUp/Modal.css';
+
+/* Friend Styles */
+@import 'styles/Friend/FriendList.css';
+@import 'styles/Friend/FriendsSearch.css';
+@import 'styles/Friend/FriendProfile.css';
+
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #89c4f4, #f9e7b8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background: rgba(255, 255, 255, 0.8);
+  left: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  margin: 0;
+  color: #0056a8;
+  font-size: 28px;
+}
+
+.nav-btn {
+  background: #0056a8;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #003f7f;
+  transform: scale(1.1);
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  flex-grow: 1;
+  padding: 100px 20px 20px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-left: 11px;
+}
+
+.form-card {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+  flex: 1;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-and-cards {
+  margin-top: -27px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  margin-left: -15px;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+.form-btn {
+  background: linear-gradient(45deg, #28a745, #218838);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.aside-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+.aside-title {
+  font-size: 20px;
+  color: #007f5f;
+  margin-bottom: 15px;
+}
+
+.card-drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 30px;
+  font-size: 16px;
+  color: #777;
+}
+
+.friends-list {
+  list-style: none;
+  padding: 0;
+}
+
+.friends-list li {
+  margin: 10px 0;
+}
+
+.friends-list a {
+  text-decoration: none;
+  color: #0056a8;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.friends-list a:hover {
+  color: #003f7f;
+}
+
+.new-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  margin-left: 0px;
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.new-card-title {
+  color: #007f5f;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.new-card-description {
+  color: #555;
+  font-size: 16px;
+}
+
+#errormsg {
+  color: red;
+  max-width: fit-content;
+}
+
+#new-card-container {
+  width: 100%;
+  max-width: 370px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: opacity 0.3s ease;
+  margin-left: 15px;
+}
+
+#new-card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-action-btn {
+  background-color: #0056a8;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card-action-btn:hover {
+  background: #003f7f;
+  transform: scale(1.1);
+}
+
+.edit-btn {
+  background-color: #ffc107;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

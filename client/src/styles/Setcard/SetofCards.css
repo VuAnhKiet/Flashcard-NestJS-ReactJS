@@ -1,0 +1,35 @@
+i {
+    border-radius: 50%;
+    padding: 10px;
+    background-color: green;
+    color: aliceblue;
+}
+
+ul>li {
+    padding: 15px;
+    list-style: none;
+    font-size: 20px;
+    margin: 0 0 8px 0;
+}
+
+ul {
+    margin: 0 20px;
+}
+
+.setofcards {
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 31%;
+    text-align: center;
+}
+
+div.list-set {
+    margin-top: 3%;
+    overflow-y: scroll;
+    max-height: 300px;
+    padding-left: 1%;
+}
+
+.list-set::-webkit-scrollbar {
+    display: none;
+}

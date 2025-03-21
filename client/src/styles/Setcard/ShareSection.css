@@ -1,0 +1,82 @@
+.share-container {
+    display: flex;
+    padding: 20px;
+}
+
+.shareholder-section {
+    width: 100%;
+    max-width: 25%;
+    max-height: 60%;
+    height: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 17.5%;
+    left: 5vh;
+}
+
+.shareholder-section h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.shareholder-dropzone {
+    height: 300px;
+    border: 2px dashed #bbb;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    color: #888;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e0f7fa;
+    border: 1px solid #29b6f6;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: grab;
+}
+
+.card:hover {
+    background-color: #b2ebf2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card .remove-button {
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.card-list {
+    margin-left: 35%;
+    padding: 20px;
+    width: 65%;
+}
+
+.card-list .card:hover .remove-button {
+    display: inline-block;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.card .remove-button:hover {
+    background-color: darkred;
+}

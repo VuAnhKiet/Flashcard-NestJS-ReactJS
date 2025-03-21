@@ -1,0 +1,66 @@
+button {
+    border-radius: 4px;
+    padding: 8px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid whitesmoke;
+    background: whitesmoke;
+    box-shadow: none;
+    font-family: inherit;
+    margin-right: 5px
+}
+
+.create {
+    margin-left: 25%;
+    width: 50%;
+    margin-top: 10px;
+    background-color: darkgray;
+    font-weight: bold;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.buttonss {
+    padding-top: 8px;
+    padding-right: 8px;
+}
+
+.delete {
+    float: right;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-weight: bold;
+    color: red;
+    border-style: solid;
+}
+
+.deletesetcard {
+    float: right;
+    margin: 2px;
+    padding: 0;
+    overflow: visible;
+    font-weight: bold;
+    color: red;
+    /* border-style:solid; */
+}
+
+.editcard {
+    margin-top: 80px;
+    float: right;
+    background-color: rgb(230, 227, 227);
+}
+
+.editsetcards {
+    margin-left: 5px;
+    padding: 2px;
+    border: 0px;
+}
+
+.navbut {
+
+    font-size: 1vw
+}
+
