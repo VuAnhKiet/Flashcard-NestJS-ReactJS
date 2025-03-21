@@ -121,7 +121,10 @@ export class AuthService {
 
     async resetPassword(token: string, newPassword: string): Promise<string> {
         try {
-            const tokenEntry = await this.tokenRepository.findOne({ where: { token } });
+            const tokenEntry = await this.tokenRepository.findOne({ 
+                where: { token },
+                relations:['user'], 
+            });
             if (!tokenEntry) {
                 throw new BadRequestException('Invalid token');
             }
