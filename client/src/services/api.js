@@ -74,3 +74,8 @@ export const del = async (endpoint) => {
     const response = await apiClient.delete(endpoint);
     return response.data;
 };
+
+export const patch = async (endpoint, config = {}) => {
+    const response = await apiClient.patch(endpoint, config);
+    return response.data;
+};
