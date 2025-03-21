@@ -69,7 +69,7 @@ export const useUser = () => {
         try {
             const response = await userResetPassWord(token, confirmPassword);
         } catch (err) {
-            alert(err)
+            return {error: err.response?.data?.message};
         }
     }
 
