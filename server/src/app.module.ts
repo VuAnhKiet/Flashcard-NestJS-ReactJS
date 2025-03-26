@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { dataSourceOptions } from './config/data-source';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CardModule } from './modules/card/card.module';
@@ -25,7 +23,5 @@ import { ConfigModule } from '@nestjs/config';
       }
     ),
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
